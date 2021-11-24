@@ -104,7 +104,7 @@ int main(void)
     assert(0 == opt.t);
     assert(0 == opt.recursive);
     assert(0 == opt.d);
-    assert(0 == opt.error);
+    assert(1 == opt.error);
     printf("Passed error\n");}
 // Test_error2
 {    option_t opt = { 0 };
