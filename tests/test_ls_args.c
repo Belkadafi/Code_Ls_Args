@@ -116,7 +116,7 @@ int main(void)
     assert(0 == opt.t);
     assert(0 == opt.recursive);
     assert(0 == opt.d);
-    assert(0 == opt.error);
+    assert(1 == opt.error);
     printf("Passed error2\n");}
 // Test_comb1
 {    option_t opt = { 0 };
