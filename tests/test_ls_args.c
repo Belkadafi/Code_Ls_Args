@@ -72,7 +72,7 @@ int main(void)
     printf("Passed tflag\n");}
 // Rest_Rec
 {    option_t opt = { 0 };
-    char *av[] = {"ls", "-rec", "hello", NULL};
+    char *av[] = {"ls", "-R", "hello", NULL};
     ls_option_stat(av, &(opt));
     assert(0 == opt.l);
     assert(0 == opt.r);
@@ -106,6 +106,18 @@ int main(void)
     assert(0 == opt.d);
     assert(0 == opt.error);
     printf("Passed error\n");}
+// Test_error2
+{    option_t opt = { 0 };
+    char *av[] = {"ls", "-", "hello", NULL};
+    ls_option_stat(av, &(opt));
+    assert(0 == opt.l);
+    assert(0 == opt.r);
+    assert(0 == opt.a);
+    assert(0 == opt.t);
+    assert(0 == opt.recursive);
+    assert(0 == opt.d);
+    assert(0 == opt.error);
+    printf("Passed error2\n");}
 // Test_comb1
 {    option_t opt = { 0 };
     char *av[] = {"ls", "-lrdRta", "hello", NULL};
